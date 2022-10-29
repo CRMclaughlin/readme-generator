@@ -1,10 +1,12 @@
 import inquirer from 'inquirer'
 import fs from 'fs'
 
+const generateReadme = ({title, description, tableOfContents, installation, usage, license, contributing, test, questions}) => ``
+
 
 // create init function that launches inquirer
 // write my questions 
-//make sure data comes back ans I need it
+//make sure data comes back as I need it
 // send data to generate markdown via deconstructor
 // use template literals to create readme
 // send it back to index.js to populate via write to file function 
