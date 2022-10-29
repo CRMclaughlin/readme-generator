@@ -51,7 +51,12 @@ inquirer.prompt([
     },
 
 ])
-
+.then((answers) => {
+    const readMeContent = generateReadme(answers)
+    fs.writeFile('generateReadme.md', readMeContent, (err) => {
+        if (err) throw err
+    })
+})
 // create init function that launches inquirer
 // write my questions 
 //make sure data comes back as I need it
