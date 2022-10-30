@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 
 // link to where README.md is generated
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.cjs');
 
 const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
