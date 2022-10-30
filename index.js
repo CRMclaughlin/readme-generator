@@ -1,81 +1,60 @@
 import inquirer from 'inquirer'
 import fs from 'fs'
 
-const generateReadme = ({title, description, tableOfContents, installation, usage, license, contributing, test, questions}) => `
-# ${title}
+const generateReadme = require('./utils/generateMarkdown.js')
 
-## Descrition
-${description}
+const questions = () => {
+    
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your ReadMe?',
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Give a description of your project.',
+        },
+        {
+            type: 'input',
+            name: 'tableOfContents',
+            message: 'List a table of contents for your README.md',
+        },
+        {
+            type: 'input',
+            name: 'instalation',
+            message: 'Explain any installations needed to use your project.',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Describe how the application is used.',
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'List any licenses used in your project',
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'List any contributions towards your project.',
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: '',
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: '',
+        },
+    
+    ]),
+},
 
-## Table of Contents
-${tableOfContents}
-
-## Installation
-${installation}
-
-## Usage 
-${usage}
-
-## License
-${license}
-
-## Contributing
-${contributing}
-
-## Test
-${test}
-
-## Questions
-${questions}`
-
-inquirer.prompt([
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of your ReadMe?',
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: 'Give a description of your project.',
-    },
-    {
-        type: 'input',
-        name: 'tableOfContents',
-        message: 'List a table of contents for your README.md',
-    },
-    {
-        type: 'input',
-        name: 'instalation',
-        message: 'Explain any installations needed to use your project.',
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Describe how the application is used.',
-    },
-    {
-        type: 'input',
-        name: 'license',
-        message: 'List any licenses used in your project',
-    },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: 'List any contributions towards your project.',
-    },
-    {
-        type: 'input',
-        name: 'test',
-        message: '',
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: '',
-    },
-
-])
 .then((answers) => {
     const readMeContent = generateReadme(answers)
     fs.writeFile('generateReadme.md', readMeContent, (err) => {
