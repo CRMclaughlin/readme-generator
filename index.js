@@ -1,11 +1,11 @@
 // require and fs modules
-import inquirer from 'inquirer'
-import fs from 'fs'
+import inquirer from 'inquirer';
+import fs from 'fs';
 
 // link to where README.md is generated
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
-const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache']
+const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
 // array of questions for the user
 const questions = () => {
