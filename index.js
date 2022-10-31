@@ -3,14 +3,14 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 
 // link to where README.md is generated
-const generateMarkdown = require('./utils/generateMarkdown.cjs');
+import generateMarkdown from './utils/generateMarkdown.js';
 
 const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
 // array of questions for the user
-const questions = () => {
+const questions = 
     // inquirer prompt for user to answer questions
-    return inquirer.prompt([
+    [
         {
             type: 'input',
             name: 'title',
@@ -23,7 +23,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'instalation',
+            name: 'installation',
             message: 'Explain any installations needed to use your project: ',
         },
         {
@@ -49,20 +49,25 @@ const questions = () => {
         },
         {
             type: 'input',
+            name: 'test',
+            message: 'What tests to run for your application:',
+        },
+        {
+            type: 'input',
             name: 'email',
             message: 'Enter your email: ',
         },
 
-    ]),
+    ]
         //function to write README file
         function writeToFile(data) {
             const generateReadme = "./README.md";
 
             fs.writeFile(generateReadme, data, function (err) {
-                err ? console.log(err) : console.log(filename + " created!")
+                err ? console.log(err) : console.log(generateReadme + " created!")
             });
         }
-}
+
 
 function init() {
     inquirer.prompt(questions)
