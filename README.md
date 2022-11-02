@@ -1,34 +1,50 @@
-# Module 9 Assignment
-  
-  ## Descrition
-  A simple readme generator to create markdowns for projects
-  
+# Module 9 README generator
+ 
+ 
   ## Table of Contents
+  * [Description](#description)
   * [Installation](#installation)
   * [Usuage](#usage)
+  * [Video](#video)
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
+
+  ## Description
+  A simple readme generator to create markdowns for projects
   
   ## Installation
-  download node, once installed run in vs code, once npm is setup install inquirer
+  <h3> To use this project you will need these programs installed on your machine:<h3>
+  
+  * VS Code
+  * Node.js
+  
+  <h3> Steps to initialize this project <h3>
+    
+    1. Copy link from Github repo and clone to your coding workspace
+    2. In your terminal use "npm init -y" to install Node Package Manager
+    3. In your terminal use the command "npm i inquirer" to install inquirer
+    
   
   ## Usage 
-  N/A
   
-## Instructions Link
+ From your terminal use the command "node index.js" to initialize prompts. Follow the prompts until the end and once completed a markdown will be created
+  
+## Video
 
-<video src="" controls>
+Watch to see how it works 😃
+    
+https://drive.google.com/file/d/1fH_5lCOnV-quNsXNbf2csp8t440zrZQ0/preview
   
-  ## Licenses
-    This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
+  ## License
+    N/A
   
   
   ## Contributing
   N/A
   
-  ## Test
+  ## Tests
   N/A
   
   ## Questions
