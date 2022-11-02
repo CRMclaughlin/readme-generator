@@ -5,7 +5,7 @@ import fs from 'fs';
 // link to where README.md is generated
 import generateMarkdown from './utils/generateMarkdown.js';
 
-const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
+// const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
 // array of questions for the user
 const questions = 
@@ -14,33 +14,7 @@ const questions =
         {
             type: 'input',
             name: 'title',
-            message: 'Enter the title of your project:',
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Give a description of your project: ',
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'Explain any installations needed to use your project: ',
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Describe how the application is used: ',
-        },
-        {
-            type: 'input',
-            name: 'license',
-            message: 'Enter project license(s): ',
-            choices: licenses
-        },
-        {
-            type: 'input',
-            name: 'contributing',
-            message: 'List any contributions towards your project.',
+            message: 'Welcome to README generator! Please enter the title of your project:',
         },
         {
             type: 'input',
@@ -49,13 +23,39 @@ const questions =
         },
         {
             type: 'input',
-            name: 'test',
-            message: 'What tests to run for your application:',
+            name: 'email',
+            message: 'Enter your email: ',
         },
         {
             type: 'input',
-            name: 'email',
-            message: 'Enter your email: ',
+            name: 'description',
+            message: 'Enter the description of your project: ',
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'What are the instructions for installation:',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Usage Instructions:',
+        },
+        {
+            type: 'input',
+            name: 'licenses',
+            message: 'Enter project license(s): ',
+            choices: ['None', 'MIT', 'BSD', 'GPL', 'Apache'],
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'How can others contribute to this project?',
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'Describe the tests for your application and how to use them:',
         },
 
     ]
@@ -77,6 +77,8 @@ function init() {
 //function to initialize app
 init()
 
+
+// Brocked to-do list
 // create init function that launches inquirer
 // write my questions
 //make sure data comes back as I need it
@@ -84,13 +86,6 @@ init()
 // use template literals to create readme
 // send it back to index.js to populate via write to file function
 
-
-
-//use inquire to create question prompts via node
-// us 'fs' to access the write to file function
-// write out your file that way
-// use path to route that file to generate markdown javascript
-// that should be a readme that you generate using temperate literals
 
 
 
