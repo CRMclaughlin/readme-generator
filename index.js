@@ -42,7 +42,7 @@ const questions =
             message: 'Usage Instructions:',
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'licenses',
             message: 'Enter project license(s): ',
             choices: ['None', 'MIT', 'BSD', 'GPL', 'Apache'],
